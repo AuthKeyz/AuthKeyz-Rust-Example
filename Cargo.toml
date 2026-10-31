@@ -1,0 +1,11 @@
+[package]
+authors = ["AuthKeyz <https://github.com/AuthKeyz>"]
+edition = "2021"
+name = "authkeyz-loader"
+version = "1.0.0"
+
+[dependencies]
+authkeyz = "1.2.0"
+#authkeyz = { version = "1.0.3", features = ["seller", "v1_1], default-features = false }
+obfstr = "0.3.0" # sting only obfuscation
+#goldberg = "0.1.0" # for obfuscation
