@@ -18,6 +18,7 @@ fn get_hwid() -> String {
 }
 
 fn main() {
+    // Example for API 1.2:
     let mut authkeyzapp = authkeyz::v1_2::AuthKeyzApi::new(
         "example",
         "JjPMBVlIOd",
@@ -25,6 +26,15 @@ fn main() {
         "1.0",
         "https://authkeyz.bond/api/1.2/",
     );
+
+    // For API 1.3 (with Ed25519 signature checks and secretless architecture):
+    // let mut authkeyzapp13 = authkeyz::v1_3::AuthKeyzApi::new(
+    //     "example",
+    //     "JjPMBVlIOd",
+    //     "", // secret omitted in API 1.3
+    //     "1.0",
+    //     "https://authkeyz.bond/api/1.3/",
+    // );
 
     // None or Some(apphash)
     // we call unwrap() because if the response success = false, it returns an error with the error message
