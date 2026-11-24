@@ -18,22 +18,22 @@ fn get_hwid() -> String {
 }
 
 fn main() {
-    // Example for API 1.2:
-    let mut authkeyzapp = authkeyz::v1_2::AuthKeyzApi::new(
+    // API 1.3 (with Ed25519 signature checks and secretless architecture):
+    let mut authkeyzapp = authkeyz::v1_3::AuthKeyzApi::new(
         "example",
         "JjPMBVlIOd",
-        "db40d586f4b189e04e5c18c3c94b7e72221be3f6551995adc05236948d1762bc",
+        "", // secret omitted in API 1.3
         "1.0",
-        "https://authkeyz.bond/api/1.2/",
+        "https://authkeyz.bond/api/1.3/",
     );
 
-    // For API 1.3 (with Ed25519 signature checks and secretless architecture):
-    // let mut authkeyzapp13 = authkeyz::v1_3::AuthKeyzApi::new(
+    // Example for API 1.2 (legacy):
+    // let mut authkeyzapp12 = authkeyz::v1_2::AuthKeyzApi::new(
     //     "example",
     //     "JjPMBVlIOd",
-    //     "", // secret omitted in API 1.3
+    //     "db40d586f4b189e04e5c18c3c94b7e72221be3f6551995adc05236948d1762bc",
     //     "1.0",
-    //     "https://authkeyz.bond/api/1.3/",
+    //     "https://authkeyz.bond/api/1.2/",
     // );
 
     // None or Some(apphash)
